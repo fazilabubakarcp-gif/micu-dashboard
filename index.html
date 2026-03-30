@@ -8,11 +8,12 @@
     <style>
         body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .dashboard-header { background: #004a99; color: white; padding: 20px; margin-bottom: 20px; border-radius: 0 0 15px 15px; }
-        .patient-card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px; padding: 15px; height: 100%; }
+        .patient-card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px; padding: 15px; height: 100%; border-left: 5px solid #28a745; }
         .critical { background-color: #ffdce0; border-left: 5px solid #dc3545; }
-        .warning { background-color: #fff3cd; border-left: 5px solid #ffc107; }
+        .isolation { border-left: 5px solid #fd7e14; background-color: #fffaf0; }
         .vitals-badge { font-size: 0.9rem; padding: 5px 10px; border-radius: 5px; }
         .score-pill { font-weight: bold; background: #e9ecef; border-radius: 20px; padding: 2px 10px; margin-right: 5px; font-size: 0.8rem; }
+        .alert-text { color: #dc3545; font-weight: bold; font-size: 0.85rem; }
         .refresh-text { font-size: 0.8rem; color: #ddd; }
     </style>
 </head>
@@ -24,6 +25,7 @@
     </div>
     <div class="container-fluid">
         <div class="row" id="patient-container">
+            <!-- MICU 01 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -40,6 +42,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 02 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -56,6 +59,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 03 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -63,13 +67,15 @@
                         <span class="badge bg-success">Stable</span>
                     </div>
                     <hr>
-                    <p><strong>Vitals:</strong> 150/90 | HR: 110 | SpO2: 92%</p>
+                    <p><strong>Vitals:</strong> 150/90 | HR: 108 | SpO2: 94%</p>
                     <p><strong>Diagnosis:</strong> MND, Dysphagia</p>
                     <div class="mt-2">
                         <span class="score-pill">MND Protocol</span>
+                        <span class="score-pill">Pain: 0</span>
                     </div>
                 </div>
             </div>
+            <!-- MICU 04 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -86,6 +92,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 05 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -93,8 +100,8 @@
                         <span class="badge bg-success">Stable</span>
                     </div>
                     <hr>
-                    <p><strong>Vitals:</strong> 112/81 | HR: 106 | SpO2: 100%</p>
-                    <p><strong>Diagnosis:</strong> Observation</p>
+                    <p><strong>Vitals:</strong> 130/70 | HR: 80 | SpO2: 96%</p>
+                    <p><strong>Diagnosis:</strong> Open Fracture, CKD</p>
                     <div class="mt-2">
                         <span class="score-pill">Pain: 0</span>
                         <span class="score-pill">Fall: 35</span>
@@ -102,6 +109,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 06 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -118,6 +126,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 07 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -134,6 +143,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 08 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -141,7 +151,7 @@
                         <span class="badge bg-success">Stable</span>
                     </div>
                     <hr>
-                    <p><strong>Vitals:</strong> 171/80 | HR: 63 | SpO2: 99%</p>
+                    <p><strong>Vitals:</strong> 112/81 | HR: 106 | SpO2: 100%</p>
                     <p><strong>Diagnosis:</strong> Observation</p>
                     <div class="mt-2">
                         <span class="score-pill">Pain: 0</span>
@@ -150,6 +160,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 09 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -159,6 +170,7 @@
                     <hr>
                     <p><strong>Vitals:</strong> 171/80 | HR: 63 | SpO2: 99%</p>
                     <p><strong>Diagnosis:</strong> DM, Old PTB</p>
+                    <p class="alert-text">DVT Prophylaxis: Clexane</p>
                     <div class="mt-2">
                         <span class="score-pill">Pain: 0</span>
                         <span class="score-pill">Fall: 35</span>
@@ -166,6 +178,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 10 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
@@ -182,6 +195,7 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 11 -->
             <div class="col-md-4 mb-3">
                 <div class="patient-card critical">
                     <div class="d-flex justify-content-between align-items-center">
@@ -190,7 +204,7 @@
                     </div>
                     <hr>
                     <p><strong>Vitals:</strong> 82/31 | HR: 130 | SpO2: 88%</p>
-                    <p><strong>Diagnosis:</strong> Potential Sepsis/ARDS</p>
+                    <p><strong>Diagnosis:</strong> Potential Sepsis, ARDS</p>
                     <div class="mt-2">
                         <span class="score-pill">Pain: 0</span>
                         <span class="score-pill">Fall: 50</span>
@@ -198,11 +212,12 @@
                     </div>
                 </div>
             </div>
+            <!-- MICU 13 -->
             <div class="col-md-4 mb-3">
-                <div class="patient-card">
+                <div class="patient-card isolation">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">MICU 13: MARIYUMMA</h5>
-                        <span class="badge bg-success">Stable</span>
+                        <span class="badge bg-warning text-dark">Isolation</span>
                     </div>
                     <hr>
                     <p><strong>Vitals:</strong> 118/80 | HR: 100 | SpO2: 99%</p>
