@@ -8,11 +8,11 @@
     <style>
         body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .dashboard-header { background: #004a99; color: white; padding: 20px; margin-bottom: 20px; border-radius: 0 0 15px 15px; }
-        .patient-card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px; padding: 15px; }
+        .patient-card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px; padding: 15px; height: 100%; }
         .critical { background-color: #ffdce0; border-left: 5px solid #dc3545; }
         .warning { background-color: #fff3cd; border-left: 5px solid #ffc107; }
         .vitals-badge { font-size: 0.9rem; padding: 5px 10px; border-radius: 5px; }
-        .score-pill { font-weight: bold; background: #e9ecef; border-radius: 20px; padding: 2px 10px; margin-right: 5px; }
+        .score-pill { font-weight: bold; background: #e9ecef; border-radius: 20px; padding: 2px 10px; margin-right: 5px; font-size: 0.8rem; }
         .refresh-text { font-size: 0.8rem; color: #ddd; }
     </style>
 </head>
@@ -24,52 +24,200 @@
     </div>
     <div class="container-fluid">
         <div class="row" id="patient-container">
-            <!-- Patient 1 -->
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <div class="patient-card">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">MICU 1: MARIYUMMA</h5>
+                        <h5 class="mb-0">MICU 01: SINDHU SHANMUGHAN</h5>
                         <span class="badge bg-success">Stable</span>
                     </div>
                     <hr>
-                    <p><strong>Vitals:</strong> 110/70 (83) | HR: 88 | SpO2: 98%</p>
-                    <p><strong>Diagnosis:</strong> Post-OP Observation</p>
+                    <p><strong>Vitals:</strong> 140/85 | HR: 82 | SpO2: 100%</p>
+                    <p><strong>Diagnosis:</strong> Observation</p>
                     <div class="mt-2">
-                        <span class="score-pill">APACHE II: 12</span>
-                        <span class="score-pill">SOFA: 2</span>
-                    </div>
-                    <div class="mt-3">
-                        <small class="text-muted">DVT: SCD | MDR: None</small>
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 45</span>
+                        <span class="score-pill">Braden: 13</span>
                     </div>
                 </div>
             </div>
-            <!-- Patient 6 (Critical) -->
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 02: BEEVATHUMMA</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 140/80 | HR: 124 | SpO2: 100%</p>
+                    <p><strong>Diagnosis:</strong> Multiple Myeloma</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 03: VENUGOPALAN K V</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 150/90 | HR: 110 | SpO2: 92%</p>
+                    <p><strong>Diagnosis:</strong> MND, Dysphagia</p>
+                    <div class="mt-2">
+                        <span class="score-pill">MND Protocol</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 04: BISNA JOSEPH</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 112/69 | HR: 69 | SpO2: 99%</p>
+                    <p><strong>Diagnosis:</strong> Observation</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 45</span>
+                        <span class="score-pill">Braden: 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 05: RADHAMANI. C. K.</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 112/81 | HR: 106 | SpO2: 100%</p>
+                    <p><strong>Diagnosis:</strong> Observation</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 06: BALAKRISHNAN P M</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 130/90 | HR: 88 | SpO2: 94%</p>
+                    <p><strong>Diagnosis:</strong> CAD, T2DM, DKD</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 45</span>
+                        <span class="score-pill">Braden: 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 07: SURESH P B</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 150/90 | HR: 80 | SpO2: 98%</p>
+                    <p><strong>Diagnosis:</strong> Post-CABG, CKD</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 08: RENISH NARAYANAN</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 171/80 | HR: 63 | SpO2: 99%</p>
+                    <p><strong>Diagnosis:</strong> Observation</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 09: RAMACHANDRAN</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 171/80 | HR: 63 | SpO2: 99%</p>
+                    <p><strong>Diagnosis:</strong> DM, Old PTB</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 10: MOHAMMED</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 122/67 | HR: 77 | SpO2: 99%</p>
+                    <p><strong>Diagnosis:</strong> COPD, DM</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 35</span>
+                        <span class="score-pill">Braden: 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
                 <div class="patient-card critical">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">MICU 11: SARADA</h5>
                         <span class="badge bg-danger">Critical</span>
                     </div>
                     <hr>
-                    <p><strong>Vitals:</strong> 82/31 (48) | HR: 130 | SpO2: 88%</p>
-                    <p><strong>Diagnosis:</strong> Septic Shock, ARDS</p>
+                    <p><strong>Vitals:</strong> 82/31 | HR: 130 | SpO2: 88%</p>
+                    <p><strong>Diagnosis:</strong> Potential Sepsis/ARDS</p>
                     <div class="mt-2">
-                        <span class="score-pill">APACHE II: 28</span>
-                        <span class="score-pill">SOFA: 14</span>
-                    </div>
-                    <div class="mt-3 text-danger">
-                        <strong>ALERT:</strong> No DVT Prophylaxis | MDR: Teicoplanin Required
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 50</span>
+                        <span class="score-pill">Braden: 9</span>
                     </div>
                 </div>
             </div>
-            <!-- More patients will be added dynamically by the AI agent -->
+            <div class="col-md-4 mb-3">
+                <div class="patient-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">MICU 13: MARIYUMMA</h5>
+                        <span class="badge bg-success">Stable</span>
+                    </div>
+                    <hr>
+                    <p><strong>Vitals:</strong> 118/80 | HR: 100 | SpO2: 99%</p>
+                    <p><strong>Diagnosis:</strong> Observation</p>
+                    <div class="mt-2">
+                        <span class="score-pill">Pain: 0</span>
+                        <span class="score-pill">Fall: 50</span>
+                        <span class="score-pill">Braden: 13</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
-        // Auto-refresh script (every 30 seconds as requested)
-        setTimeout(() => {
-            window.location.reload();
-        }, 30000);
+        setTimeout(() => { window.location.reload(); }, 30000);
         document.getElementById('last-updated').innerText = 'Last Updated: ' + new Date().toLocaleTimeString();
     </script>
 </body>
